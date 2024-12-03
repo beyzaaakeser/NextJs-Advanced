@@ -11,11 +11,17 @@ const Home = () => {
       <h1>Anasayfa</h1>
       <div>
         <h1>Local Resim </h1>
-        <Image src={manzara} alt="manzara 1" />
+        <Image src={manzara} alt="manzara 1" quality={100} priority={1} placeholder='blur' />
       </div>
       <div>
         <h1>Remote Resim </h1>
-        <Image src={url} width={500} height={250} alt="manzara 1" />
+        <Image src={url} width={250} height={500} alt="manzara 1" priority={3}  />
+      </div>
+      <div>
+        <h1>Remote Resim Full Genişlik </h1>
+        <div className="relative h-[300px] ">
+          <Image src={url} fill alt="manzara 1" priority={2}  />
+        </div>
       </div>
     </div>
   );
