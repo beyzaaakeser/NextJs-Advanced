@@ -1,10 +1,6 @@
 import React from 'react';
+import { getRecipes } from '../utils';
 
-const getRecipes = async () => {
-  const res = await fetch('https://dummyjson.com/recipes');
-
-  return res.json();
-};
 
 const Home = async () => {
   const data = await getRecipes();
