@@ -1,6 +1,13 @@
 import React from 'react';
 import { getRecipes } from '../utils';
 
+/* tarifler sayfası static bir sayfa olduğunda dolayı build anında olulturulur
+ api isteğini build anında atar ve kullanıcı her sayfaya girdiğinde build anında
+  oluşturulan htmli görür ama sayfaya bağlı olarak belirli aralıklara sayfanın 
+  güncel kalmasını sağlamak için revalidate özelliğini kullanırız burada verdiğimiz 
+  süre sonunda bu sayfaya girildiğinde build anında oluşturulan içerğii görüntülemek 
+  yerine tekrardan sayfa oluşturulur tekrardan api isteği atılır */
+export const revalidate = 3600;
 
 const Home = async () => {
   const data = await getRecipes();

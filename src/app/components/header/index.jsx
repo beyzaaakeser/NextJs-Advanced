@@ -7,6 +7,7 @@ const Header = async () => {
   // api isteklerinden sadece biri gerçekten api'a giidecek diğeri ilk istekten gelen cevabı kullanıcak
   // const data = await getRecipes();
   const data = await getRecipes();
+
   return (
     <header className="px-10 py-5 border-b shadow flex justify-between">
       <h1>NEXT.JS</h1>
