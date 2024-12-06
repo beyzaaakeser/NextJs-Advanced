@@ -1,7 +1,7 @@
 'use client';
 import { data } from '@/app/constants';
 import Image from 'next/image';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 
 const DetailPreview = () => {
   const {id} = useParams();
@@ -14,6 +14,9 @@ const DetailPreview = () => {
   const refresh = () => {
     window.location.reload();
   };
+
+  const path = usePathname()
+  console.log(path)
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur grid place-items-center p-5">
       <div className="pb-5 px-5 bg-white rounded-md text-black text-5xl flex flex-col gap-5 ">
