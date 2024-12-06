@@ -15,6 +15,7 @@ const Header = async () => {
       <nav className="flex gap-5">
         <Link href={'/'}>Ana Sayfa</Link>
         <Link href={'/recipes'}>Tarifler ({data.recipes.length}) </Link>
+        <Link href={'/article'}>Makaleler </Link>
         <Link href={'/iletisim'}>İletişim</Link>
       </nav>
     </header>
